@@ -1,2 +1,6 @@
-package org.example.servlets;public class CurrencyServlet {
+package org.example.servlets;
+
+import javax.servlet.http.HttpServlet;
+
+public class CurrencyServlet extends HttpServlet {
 }

@@ -1,2 +1,6 @@
-package org.example.servlets;public class ExchangeRatesServlet {
+package org.example.servlets;
+
+import javax.servlet.http.HttpServlet;
+
+public class ExchangeRatesServlet extends HttpServlet {
 }
