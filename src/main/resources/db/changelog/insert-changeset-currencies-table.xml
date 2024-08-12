@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert_into_currencies" author="eradiance">
+        <insert tableName="currencies">
+            <column name="code" value="AUD"/>
+            <column name="full_name" value="Australian dollar"/>
+            <column name="sign" value="A$"/>
+        </insert>
+        <insert tableName="currencies">
+            <column name="code" value="EUR"/>
+            <column name="full_name" value="Euro"/>
+            <column name="sign" value="€"/>
+        </insert>
+        <insert tableName="currencies">
+            <column name="code" value="RUB"/>
+                <column name="full_name" value="Russian Ruble"/>
+            <column name="sign" value="₽"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

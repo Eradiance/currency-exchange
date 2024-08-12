@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create_exchange_rate_table" author="eradiance">
+        <createTable tableName="exchange_rate">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="base_currency_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="exchange_rates_base_currency_id_currencies_id" references="currencies(id)"/>
+            </column>
+            <column name="target_currency_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="exchange_rates_target_currency_id_currencies_id" references="currencies(id)"/>
+            </column>
+            <column name="rate" type="decimal(6)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

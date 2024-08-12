@@ -28,12 +28,6 @@ public class CurrenciesServlet extends HttpServlet {
         req.setAttribute("currenciesFromServer", currencies);
         RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/jsp/currencies.jsp");
         dispatcher.forward(req, resp);
-
-      /*  Writer out = resp.getWriter();
-        out.write(String.valueOf(currencies.get(1).toString()));
-        out.write(String.valueOf(currencies.get(2).toString()));
-        out.write(String.valueOf(currencies.get(0).toString()));*/
-
     }
 
     @Override
